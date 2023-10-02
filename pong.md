@@ -10,3 +10,19 @@ coder un algorithme
 ```blocks
 basic.showString(":)")
 ```
+
+# Variables
+
+Ok v
+
+# Conditions
+
+ok c
+
+# Boucles
+
+ok b
+
+## Fin
+
+Félicitation tu as créer ton premier programme !
