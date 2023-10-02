@@ -1,6 +1,11 @@
 
 > Open this page at [https://leojuguet.github.io/fete-de-la-science2023/](https://leojuguet.github.io/fete-de-la-science2023/)
 
+## Pong
+
+* [pong](/pong/pong) [start]
+
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
