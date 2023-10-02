@@ -3,8 +3,8 @@
 
 ## Pong
 
-* [pong](/pong/pong) [start]
-
+* [pong](/fete-de-la-science2023/pong)
+* [start in makecode](https://makecode.microbit.org/beta#tutorial:github:LeoJuguet/fete-de-la-science2023/pong)
 
 ## Use as Extension
 
