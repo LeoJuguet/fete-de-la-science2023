@@ -19,7 +19,11 @@ Maintenant on aimerais savoir de quel cote penche la carte.
 Pour cela on a besoin de conditions.
 
 ```blocks
-basic.showString(":)")
+if (input.compassHeading() < 45) {
+	basic.showString("Right")
+}else if (input.compassHeading() > 45){
+    basic.showString("Left")
+}
 ```
 
 ## Variables
@@ -31,7 +35,53 @@ Pour cela utilisons des variables !
 Une variable c'est comme un coffre.
 
 ```blocks
-basic.showString(":)")
+let position = 0;
+if (input.compassHeading() > 0) {
+    position = position + 1
+}else if (input.compassHeading() < 0){
+    position = position - 1
+}
+if(position == -2 ){
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        # . . . .
+        . . . . .
+        . . . . .
+        `)
+}elif (position == -1 ){
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . # . . .
+        . . . . .
+        . . . . .
+        `)
+}elif (position == 0 ){
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+}elif (position == 1){
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . # .
+        . . . . .
+        . . . . .
+        `)
+}elif (position == 2){
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . #
+        . . . . .
+        . . . . .
+        `)
+}
 ```
 
 
@@ -41,9 +91,57 @@ Mais malheuresement le programme ne s'exécute qu'une seule fois :(
 
 Mais l'on peut simplement résoudre ce problème en utilisant des boucles !
 
+
 ```blocks
-basic.showString(":)")
+let position = 0;
+if (input.compassHeading() > 0) {
+    position = position + 1
+}else if (input.compassHeading() < 0){
+    position = position - 1
+}
+if(position == -2 ){
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        # . . . .
+        . . . . .
+        . . . . .
+        `)
+}elif (position == -1 ){
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . # . . .
+        . . . . .
+        . . . . .
+        `)
+}elif (position == 0 ){
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+}elif (position == 1){
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . # .
+        . . . . .
+        . . . . .
+        `)
+}elif (position == 2){
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . #
+        . . . . .
+        . . . . .
+        `)
+}
 ```
+
 
 ## Fin
 
