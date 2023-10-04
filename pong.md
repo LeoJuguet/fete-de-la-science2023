@@ -49,7 +49,7 @@ if(position == -2 ){
         . . . . .
         . . . . .
         `)
-}elif (position == -1 ){
+}else if (position == -1 ){
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -57,7 +57,7 @@ if(position == -2 ){
         . . . . .
         . . . . .
         `)
-}elif (position == 0 ){
+}else if (position == 0 ){
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -65,7 +65,7 @@ if(position == -2 ){
         . . . . .
         . . . . .
         `)
-}elif (position == 1){
+}else if (position == 1){
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -73,7 +73,7 @@ if(position == -2 ){
         . . . . .
         . . . . .
         `)
-}elif (position == 2){
+}else if (position == 2){
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -91,56 +91,6 @@ Mais malheuresement le programme ne s'exécute qu'une seule fois :(
 
 Mais l'on peut simplement résoudre ce problème en utilisant des boucles !
 
-
-```blocks
-let position = 0;
-if (input.compassHeading() > 0) {
-    position = position + 1
-}else if (input.compassHeading() < 0){
-    position = position - 1
-}
-if(position == -2 ){
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        # . . . .
-        . . . . .
-        . . . . .
-        `)
-}elif (position == -1 ){
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . # . . .
-        . . . . .
-        . . . . .
-        `)
-}elif (position == 0 ){
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . # . .
-        . . . . .
-        . . . . .
-        `)
-}elif (position == 1){
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . # .
-        . . . . .
-        . . . . .
-        `)
-}elif (position == 2){
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . #
-        . . . . .
-        . . . . .
-        `)
-}
-```
 
 
 ## Fin
