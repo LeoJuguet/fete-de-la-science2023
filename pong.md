@@ -1,15 +1,23 @@
 # Pong
 
-## Introduction @showhint
+## Introduction @showdialog
 Aujourd'hui nous allons tenter de comprendre ce que signifie
 coder un algorithme.
-Pour cela faisons un Pong !
+Pour cela faisons un Pong ensemble !
 
 
 ## Première instruction
-Un programme n'est rien d'autres qu'une suite de petites instructions
+Un programme est une suite d'instruction. Une instruction
+c'est une opération très simple. Essayes d'afficher un dessin
+sur le microbit en glissant l'instruction ||basic:showLeds||
 ```blocks
-basic.showString(":)")
+ basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        # . . . #
+        . # # # .
+        `)
 ```
 
 
