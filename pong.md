@@ -1,5 +1,9 @@
 # Pong
 
+```template
+//
+```
+
 ## Introduction @showdialog
 Aujourd'hui nous allons tenter de comprendre ce que signifie
 coder un algorithme.
