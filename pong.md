@@ -55,7 +55,7 @@ est vrai.
 Essayons !
 
 ## Boucles
-Mets le programme que tu viens de coder dans une boucle tant que.
+Mets le programme que tu viens de coder dans une boucle ``||loops:while true||``.
 
 ```blocks
 while(true){
