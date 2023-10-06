@@ -31,10 +31,15 @@ dans le blocks ``||loops:on start||``
 Maintenant on aimerais savoir de quel côté penche la carte.
 Pour cela on a besoin de conditions.
 
+## Conditions
+Insère un bloque ``||conditions:si||`` et affiche un point du
+cotes où la carte penche. Pour cela utilise un test sur la valeur
+de ``||input:compassHeading||``
+
 ```blocks
-if (input.compassHeading() < 45) {
+if (input.compassHeading() < 0) {
 	basic.showString("Right")
-}else if (input.compassHeading() > 45){
+}else if (input.compassHeading() > 0){
     basic.showString("Left")
 }
 ```
