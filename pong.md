@@ -52,6 +52,16 @@ Essayons !
 ## Boucles
 Mets le programme que tu viens de coder dans une boucle tant que.
 
+```blocks
+while(true){
+    if (input.compassHeading() < 45) {
+	    basic.showString("Right")
+    }else if (input.compassHeading() > 45){
+        basic.showString("Left")
+    }
+}
+```
+
 
 ## Variables @showdialog
 Maintenant que l'on sait de quel cote ca penche,
