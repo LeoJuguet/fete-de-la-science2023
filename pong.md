@@ -35,6 +35,20 @@ if (input.compassHeading() < 45) {
 }
 ```
 
+## Ca marche pas ? @showdialog
+C'est etrange pour le moment ca ne marche pas bien.
+Le programme effectue une itération puis s'arrête.
+
+Pour remedier à ce problème utilisons des boucles !
+
+Une boucle est simplement un bloque qui se répète tant qu'une condition
+est vrai.
+Essayons !
+
+## Boucles
+Mets le programme que tu viens de coder dans une boucle tant que.
+
+
 ## Variables @showdialog
 Maintenant que l'on sait de quel cote ca penche,
 on veut se souvenir de la position de la balle.
@@ -126,19 +140,6 @@ if(position == -2 ){
 }
 ```
 
-## Ca marche pas ? @showdialog
-C'est etrange pour le moment ca ne marche pas bien.
-Le programme effectue une itération puis s'arrête.
-
-Pour remedier à ce problème utilisons des boucles !
-
-Une boucle est simplement un bloque qui se répète tant qu'une condition
-est vrai.
-Essayons !
-
-## Boucles
-Mets le programme que tu viens de coder dans une boucle tant que.
-Attention à ne pas mettre les instructions d'initialisation dans la boucle.
 
 
 ## Fin
