@@ -9,8 +9,8 @@ Pour cela faisons un Pong ensemble !
 ## Première instruction
 Un programme est une suite d'instruction. Une instruction
 c'est une opération très simple. Essaye d'afficher un dessin
-sur le microbit en glissant l'instruction ||basic:show leds||
-dans le blocks ||loops:on start||
+sur le microbit en glissant l'instruction ``||basic:show leds||``
+dans le blocks ``||loops:on start||``
 ```blocks
  basic.showLeds(`
         . . . . .
