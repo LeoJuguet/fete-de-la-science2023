@@ -4,9 +4,7 @@
 //
 ```
 
-```validation.global
-# BlocksExistValidator
-```
+
 
 ## Introduction @showdialog
 Aujourd'hui nous allons tenter de comprendre ce que signifie
@@ -28,7 +26,9 @@ dans le blocks ``||basic:on start||``
         . # # # .
         `)
 ```
-
+```validation.global
+# BlocksExistValidator
+```
 
 ## Conditions
 
