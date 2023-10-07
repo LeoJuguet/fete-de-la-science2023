@@ -13,8 +13,8 @@ Pour cela faisons un Pong ensemble !
 ## Première instruction
 Un programme est une suite d'instruction. Une instruction
 c'est une opération très simple. Essaye d'afficher un dessin
-sur le micro:bit en glissant l'instruction ``||basic:show leds||``
-dans le blocks ``||basic:on start||``
+sur le micro:bit en glissant l'instruction ``||basic:show leds||``(montrer LEDs)
+dans le blocks ``||basic:on start||``(au démarrage)
 ```blocks
  basic.showLeds(`
         . . . . .
@@ -32,9 +32,9 @@ Maintenant on aimerais savoir de quel côté penche la carte.
 Pour cela on a besoin de conditions.
 
 ## Conditions
-Insère un bloque ``||input:onGesture||`` et affiche un point du
+Insère un bloque ``||input:onGesture||``(Lorsque) et affiche un point du
 côté où la carte penche. Pour cela utilise un test sur
- ``||gesture:TilRight||`` ou ``||gesture:TilLeft||``.
+ ``||gesture:TilRight||``(incliner à droite) ou ``||gesture:TilLeft||``(incliner à gauche).
 
 ```blocks
 input.onGesture(Gesture.TilRight, function() {
@@ -68,7 +68,7 @@ est vrai.
 Essayons !
 
 ## Boucles
-Mets le programme que tu viens de coder dans une boucle ``||loops:while true||``.
+Mets le programme que tu viens de coder dans une boucle ``||loops:while true||``(tant que).
 Puis test
 ```blocks
 while(true){
