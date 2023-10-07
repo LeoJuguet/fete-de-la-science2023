@@ -71,7 +71,6 @@ Essayons !
 Mets le programme que tu viens de coder dans une boucle ``||loops:while true||``(tant que).
 Puis test
 ```blocks
-while(true){
 input.onGesture(Gesture.TilRight, function() {
 	basic.showLeds(`
         . . . . .
@@ -90,6 +89,8 @@ input.onGesture(Gesture.TilLeft, function(){
         . . . . .
         `)
 })
+while(true){
+
 }
 ```
 
@@ -111,7 +112,7 @@ Il faut donc luis assigner une valeur.
 Disons que la balle est au centre, et que sa position est donc 0.
 ```blocks
 let position = 0;
-while(true){
+
 input.onGesture(Gesture.TilRight, function() {
 	basic.showLeds(`
         . . . . .
@@ -130,7 +131,7 @@ input.onGesture(Gesture.TilLeft, function(){
         . . . . .
         `)
 })
-}
+
 ```
 
 ## Mise à jour de la variable
@@ -141,7 +142,7 @@ et enlève 1 si la carte penche à gauche.
 
 ```blocks
 let position = 0;
-while(true){
+
 input.onGesture(Gesture.TilRight, function() {
 	position = position + 1
 })
@@ -149,7 +150,6 @@ input.onGesture(Gesture.TilLeft, function(){
     position = position - 1
 })
 
-}
 ```
 
 ## Position visuel de la balle
@@ -160,15 +160,14 @@ l'aide de conditions et de la variable. (tu peux t'aider de l'indice.)
 
 
 ```blocks
-let position = 0;
-while(true){
 input.onGesture(Gesture.TilRight, function() {
 	position = position + 1
 })
 input.onGesture(Gesture.TilLeft, function(){
     position = position - 1
 })
-
+let position = 0;
+while(true){
 if(position == -2 ){
     basic.showLeds(`
         . . . . .
