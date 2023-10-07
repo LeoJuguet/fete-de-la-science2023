@@ -42,6 +42,7 @@ quand ``||input:compassHeading||`` < 180,
 et à gauche quand ``||input:compassHeading||`` > 180)
 
 ```blocks
+// @highlight
 if (input.compassHeading() < 180) {
 	basic.showLeds(`
         . . . . .
@@ -75,6 +76,7 @@ Essayons !
 Mets le programme que tu viens de coder dans une boucle ``||loops:while true||``.
 Puis test
 ```blocks
+// @highlight
 while(true){
 if (input.compassHeading() < 180) {
 	basic.showLeds(`
@@ -113,6 +115,7 @@ Au tout départ, on ne connaît pas la valeur de la variable.
 Il faut donc luis assigner une valeur. 
 Disons que la balle est au centre, et que sa position est donc 0.
 ```blocks
+// @highlight
 let position = 0;
 while(true){
 if (input.compassHeading() < 180) {
@@ -145,6 +148,7 @@ et enlève 1 si la carte penche à gauche.
 let position = 0;
 while(true){
 if (input.compassHeading() > 180) {
+    // @highlight
     position = position + 1
 }else if (input.compassHeading() < 180){
     position = position - 1
@@ -167,6 +171,7 @@ if (input.compassHeading() > 0) {
 }else if (input.compassHeading() < 0){
     position = position - 1
 }
+// @highlight
 if(position == -2 ){
     basic.showLeds(`
         . . . . .
