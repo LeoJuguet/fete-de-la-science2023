@@ -10,7 +10,7 @@
         "main.ts",
         "README.md",
         "pong.md",
-        "pong_verif.md"
+        "pongverif.md"
     ],
     "testFiles": [
         "test.ts"
