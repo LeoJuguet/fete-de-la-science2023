@@ -32,14 +32,12 @@ Maintenant on aimerais savoir de quel côté penche la carte.
 Pour cela on a besoin de conditions.
 
 ## Conditions
-Insère un bloque ``||conditions:if||`` et affiche un point du
-côté où la carte penche. Pour cela utilise un test sur la valeur
-de ``||input:compassHeading||``. (Indication : la carte penche à droite 
-quand ``||input:compassHeading||`` < 180, 
-et à gauche quand ``||input:compassHeading||`` > 180)
+Insère un bloque ``||input:onGesture||`` et affiche un point du
+côté où la carte penche. Pour cela utilise un test sur
+ ``||gesture:TilRight||`` ou ``||gesture:TilLeft||``.
 
 ```blocks
-if (input.compassHeading() < 180) {
+input.onGesture(Gesture.TilRight, function() {
 	basic.showLeds(`
         . . . . .
         . . . . .
@@ -47,7 +45,8 @@ if (input.compassHeading() < 180) {
         . . . . .
         . . . . .
         `)
-}else if (input.compassHeading() > 180){
+})
+input.onGesture(Gesture.TilLeft, function(){
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -55,7 +54,7 @@ if (input.compassHeading() < 180) {
         . . . . .
         . . . . .
         `)
-}
+})
 ```
 
 ## Ca marche pas ? @showdialog
@@ -73,7 +72,7 @@ Mets le programme que tu viens de coder dans une boucle ``||loops:while true||``
 Puis test
 ```blocks
 while(true){
-if (input.compassHeading() < 180) {
+input.onGesture(Gesture.TilRight, function() {
 	basic.showLeds(`
         . . . . .
         . . . . .
@@ -81,7 +80,8 @@ if (input.compassHeading() < 180) {
         . . . . .
         . . . . .
         `)
-}else if (input.compassHeading() > 180){
+})
+input.onGesture(Gesture.TilLeft, function(){
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -89,7 +89,7 @@ if (input.compassHeading() < 180) {
         . . . . .
         . . . . .
         `)
-}
+})
 }
 ```
 
@@ -112,7 +112,7 @@ Disons que la balle est au centre, et que sa position est donc 0.
 ```blocks
 let position = 0;
 while(true){
-if (input.compassHeading() < 180) {
+input.onGesture(Gesture.TilRight, function() {
 	basic.showLeds(`
         . . . . .
         . . . . .
@@ -120,7 +120,8 @@ if (input.compassHeading() < 180) {
         . . . . .
         . . . . .
         `)
-}else if (input.compassHeading() > 180){
+})
+input.onGesture(Gesture.TilLeft, function(){
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -128,7 +129,7 @@ if (input.compassHeading() < 180) {
         . . . . .
         . . . . .
         `)
-}
+})
 }
 ```
 
@@ -141,11 +142,13 @@ et enlève 1 si la carte penche à gauche.
 ```blocks
 let position = 0;
 while(true){
-if (input.compassHeading() > 180) {
-    position = position + 1
-}else if (input.compassHeading() < 180){
+input.onGesture(Gesture.TilRight, function() {
+	position = position + 1
+})
+input.onGesture(Gesture.TilLeft, function(){
     position = position - 1
-}
+})
+
 }
 ```
 
@@ -159,11 +162,13 @@ l'aide de conditions et de la variable. (tu peux t'aider de l'indice.)
 ```blocks
 let position = 0;
 while(true){
-if (input.compassHeading() > 0) {
-    position = position + 1
-}else if (input.compassHeading() < 0){
+input.onGesture(Gesture.TilRight, function() {
+	position = position + 1
+})
+input.onGesture(Gesture.TilLeft, function(){
     position = position - 1
-}
+})
+
 if(position == -2 ){
     basic.showLeds(`
         . . . . .
