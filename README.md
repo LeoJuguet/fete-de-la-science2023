@@ -6,6 +6,10 @@
 * [pong](/fete-de-la-science2023/pong)
 * [start in makecode](https://makecode.microbit.org/beta#tutorial:github:LeoJuguet/fete-de-la-science2023/pong)
 
+
+* [activité 1](https://makecode.microbit.org/beta#tutorial:github:manumario0/informatique-branche/introduction)
+* [activité 2](https://makecode.microbit.org/beta#tutorial:github:manumario0/informatique-branche/premier-jeu)
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
