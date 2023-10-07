@@ -9,8 +9,7 @@
     "files": [
         "main.ts",
         "README.md",
-        "pong.md",
-        "_locales/fr/pong.md"
+        "pong.md"
     ],
     "testFiles": [
         "test.ts"
