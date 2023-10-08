@@ -26,13 +26,13 @@ dans le blocks ``||basic:on start||``(au démarrage)
 ```
 
 
-## Conditions
+## Conditions @highlight
 
 Maintenant on aimerais savoir de quel côté penche la carte.
-Pour cela on a besoin de conditions.
+Pour cela on a besoin d'utiliser des conditions.
 
 ## Conditions
-Insère un bloque ``||logic:if||``(Si) et affiche un point du
+Insère un bloque ``||logique:si||``(Si) et affiche un point du
 côté où la carte penche. Pour cela utilise un test sur
  ``||input:isGesture||``(geste ... est actif) (En sélectionnant incliner à gauche, ou à droite)
 
