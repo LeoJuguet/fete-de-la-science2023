@@ -32,12 +32,12 @@ Maintenant on aimerais savoir de quel côté penche la carte.
 Pour cela on a besoin de conditions.
 
 ## Conditions
-Insère un bloque ``||input:onGesture||``(Lorsque) et affiche un point du
+Insère un bloque ``||logic:if||``(Si) et affiche un point du
 côté où la carte penche. Pour cela utilise un test sur
- ``||gesture:TilRight||``(incliner à droite) ou ``||gesture:TilLeft||``(incliner à gauche).
+ ``||input:isGesture||``(geste ... est actif) (En sélectionnant incliner à gauche, ou à droite)
 
 ```blocks
-input.onGesture(Gesture.TilRight, function() {
+if(input.isGesture(Gesture.TiltRight)) {
 	basic.showLeds(`
         . . . . .
         . . . . .
@@ -45,8 +45,8 @@ input.onGesture(Gesture.TilRight, function() {
         . . . . .
         . . . . .
         `)
-})
-input.onGesture(Gesture.TilLeft, function(){
+}
+if(input.isGesture(Gesture.TilLeft)){
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -54,7 +54,7 @@ input.onGesture(Gesture.TilLeft, function(){
         . . . . .
         . . . . .
         `)
-})
+}
 ```
 
 ## Ca marche pas ? @showdialog
@@ -69,9 +69,10 @@ Essayons !
 
 ## Boucles
 Mets le programme que tu viens de coder dans une boucle ``||loops:while true||``(tant que).
-Puis test
+Puis test.
 ```blocks
-input.onGesture(Gesture.TilRight, function() {
+while(true){
+    if(input.isGesture(Gesture.TiltRight)) {
 	basic.showLeds(`
         . . . . .
         . . . . .
@@ -79,8 +80,8 @@ input.onGesture(Gesture.TilRight, function() {
         . . . . .
         . . . . .
         `)
-})
-input.onGesture(Gesture.TilLeft, function(){
+}
+if(input.isGesture(Gesture.TilLeft)){
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -88,9 +89,7 @@ input.onGesture(Gesture.TilLeft, function(){
         . . . . .
         . . . . .
         `)
-})
-while(true){
-
+}
 }
 ```
 
@@ -113,7 +112,8 @@ Disons que la balle est au centre, et que sa position est donc 0.
 ```blocks
 let position = 0;
 
-input.onGesture(Gesture.TilRight, function() {
+while(true){
+    if(input.isGesture(Gesture.TiltRight)) {
 	basic.showLeds(`
         . . . . .
         . . . . .
@@ -121,8 +121,8 @@ input.onGesture(Gesture.TilRight, function() {
         . . . . .
         . . . . .
         `)
-})
-input.onGesture(Gesture.TilLeft, function(){
+}
+if(input.isGesture(Gesture.TilLeft)){
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -130,8 +130,8 @@ input.onGesture(Gesture.TilLeft, function(){
         . . . . .
         . . . . .
         `)
-})
-
+}
+}
 ```
 
 ## Mise à jour de la variable
@@ -142,14 +142,14 @@ et enlève 1 si la carte penche à gauche.
 
 ```blocks
 let position = 0;
-
-input.onGesture(Gesture.TilRight, function() {
+while(true){
+if(input.isGesture(Gesture.TiltRight)) {
 	position = position + 1
-})
-input.onGesture(Gesture.TilLeft, function(){
+}
+if(input.isGesture(Gesture.TilLeft)){
     position = position - 1
-})
-
+}
+}
 ```
 
 ## Position visuel de la balle
@@ -160,14 +160,15 @@ l'aide de conditions et de la variable. (tu peux t'aider de l'indice.)
 
 
 ```blocks
-input.onGesture(Gesture.TilRight, function() {
-	position = position + 1
-})
-input.onGesture(Gesture.TilLeft, function(){
-    position = position - 1
-})
+
 let position = 0;
 while(true){
+if(input.isGesture(Gesture.TiltRight)) {
+	position = position + 1
+}
+if(input.isGesture(Gesture.TilLeft)){
+    position = position - 1
+}
 if(position == -2 ){
     basic.showLeds(`
         . . . . .
